@@ -29,6 +29,8 @@ class Game {
       form.display();
     }
 
+
+
     car1 = createSprite(100,200);
     car1.addImage("c",car1image) 
     car2 = createSprite(300,200);
@@ -41,7 +43,9 @@ class Game {
 
   }
   
-
+  stop() {
+    console.log("stop called");
+  }
   
   spawnHurdle(x,y) {
   
@@ -77,7 +81,7 @@ class Game {
 
         //position the cars a little away from each other in x direction
         x = x + 200;
-        this. spawnHurdle(x-25,100);
+        //this. spawnHurdle(x-25,100);
         //use data form the database to display the cars in y direction
         y = displayHeight - allPlayers[plr].distance;
         cars[index-1].x = x;

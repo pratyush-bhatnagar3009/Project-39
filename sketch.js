@@ -44,5 +44,15 @@ function draw(){
     clear();
     game.play();
   }
+
+  if(gameState === 3){
+    console.log("Game pause called");
+    clear();    
+  }
+
+  if(gameState === 4){
+    console.log("Game start called");
+    game.play();  
+  }
 }
 

@@ -26,6 +26,13 @@ class Player {
     });
   }
 
+  updateRestart(){
+    var playerIndex = "players/player" + this.index;
+    database.ref(playerIndex).set({
+      distance:0
+    });
+  }
+
   static getPlayerInfo(){
     var playerInfoRef = database.ref('players');
     playerInfoRef.on("value",(data)=>{
